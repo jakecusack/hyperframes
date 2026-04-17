@@ -4,12 +4,12 @@ Demo composition promoting _Build Your AI Second Brain — A Complete Beginner's
 
 ## Required asset
 
-Save the book cover as `cover.jpg` in this folder (next to `index.html`). The composition expects a 2:3 portrait image — anything close (e.g. the Amazon cover) works.
+Save the book cover as `Ebook-3a-gumroad-cover.png` in this folder (next to `index.html`). The composition expects a 2:3 portrait image — anything close works. To use a different filename, update the `src=` attribute on the `#cover` image in `index.html`.
 
 ```
 samples/second-brain-promo/
 ├── index.html
-├── cover.jpg       ← you provide
+├── Ebook-3a-gumroad-cover.png   ← you provide
 ├── DESIGN.md
 └── README.md
 ```
