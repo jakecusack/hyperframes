@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Build Your AI Second Brain — 15s reel (Kinetic Type)</title>
+    <style>
+      :root {
+        --canvas-top: #2c4764;
+        --canvas-bot: #3a5f87;
+        --deep: #0f2339;
+        --text: #ffffff;
+        --accent: #3b9fde;
+        --muted: #afbcc7;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--canvas-top);
+        font-family: "Inter Tight", "Inter", system-ui, sans-serif;
+        color: var(--text);
+      }
+      [data-composition-id="book-3a-second-brain-kinetic"] {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        background: linear-gradient(180deg, #2c4764 0%, #3a5f87 100%);
+        overflow: hidden;
+      }
+      [data-composition-id="book-3a-second-brain-kinetic"]::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 45%,
+          rgba(59, 159, 222, 0.12) 0%,
+          rgba(0, 0, 0, 0) 60%
+        );
+        pointer-events: none;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+      }
+      .scene-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 120px 80px;
+        gap: 32px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .kinetic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+      }
+      .kinetic .word {
+        font-family: "Inter Tight", "Inter", sans-serif;
+        font-size: 220px;
+        font-weight: 800;
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        color: var(--text);
+      }
+      .kinetic .word.accent {
+        color: var(--accent);
+      }
+      .kinetic .word.small {
+        font-size: 160px;
+      }
+      .reveal-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+      .reveal-kicker {
+        font-family: "Inter", sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .reveal-cover {
+        width: 540px;
+        height: 810px;
+        object-fit: cover;
+        border-radius: 8px;
+        background: #1a2d45;
+        box-shadow:
+          0 50px 100px rgba(0, 0, 0, 0.5),
+          0 16px 32px rgba(0, 0, 0, 0.3);
+      }
+      .reveal-author {
+        font-family: "Inter", sans-serif;
+        font-size: 28px;
+        color: var(--muted);
+      }
+      .reveal-author .name {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .cta-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 44px;
+      }
+      .cta-title {
+        font-family: "Inter Tight", "Inter", sans-serif;
+        font-size: 130px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        max-width: 920px;
+      }
+      .cta-title .accent {
+        color: var(--accent);
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 32px 72px;
+        border-radius: 8px;
+        background: var(--accent);
+        font-family: "Inter", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--deep);
+      }
+      .cta-url {
+        font-family: "Inter", sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="stage"
+      data-composition-id="book-3a-second-brain-kinetic"
+      data-start="0"
+      data-duration="15"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div id="scene-kinetic" class="scene">
+        <div class="scene-content">
+          <div class="kinetic">
+            <span id="word-1" class="word">BUILD</span>
+            <span id="word-2" class="word">YOUR</span>
+            <span id="word-3" class="word accent">AI SECOND</span>
+            <span id="word-4" class="word small">BRAIN</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="scene-reveal" class="scene">
+        <div class="scene-content">
+          <div class="reveal-wrap">
+            <div id="reveal-kicker" class="reveal-kicker">Deepify Academy · Book 3a</div>
+            <img
+              id="reveal-cover"
+              class="reveal-cover"
+              src="cover.png"
+              alt="Build Your AI Second Brain book cover"
+            />
+            <div id="reveal-author" class="reveal-author">
+              by <span class="name">Jake Cusack</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="scene-cta" class="scene">
+        <div class="scene-content">
+          <div class="cta-wrap">
+            <div id="cta-title" class="cta-title">
+              Start building <span class="accent">today</span>
+            </div>
+            <div id="cta-button" class="cta-button">Read on Amazon</div>
+            <div id="cta-url" class="cta-url">deepify.ai</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      tl.set("#scene-kinetic", { opacity: 1 }, 0);
+      tl.set("#scene-reveal", { opacity: 0 }, 0);
+      tl.set("#scene-cta", { opacity: 0 }, 0);
+
+      // Kinetic type — each word slams in on its own beat
+      tl.set(["#word-1", "#word-2", "#word-3", "#word-4"], { opacity: 0, y: 60, scale: 0.9 }, 0);
+
+      tl.to("#word-1", { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 0.2);
+      tl.to("#word-2", { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power3.out" }, 1.1);
+      tl.to("#word-3", { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "expo.out" }, 2.2);
+      tl.to("#word-4", { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power2.out" }, 3.4);
+
+      // Subtle letter-spacing tighten as the title finishes
+      tl.to("#word-3", { letterSpacing: "-0.06em", duration: 0.6, ease: "power2.inOut" }, 4.0);
+
+      // Scale all the words down slightly to make room for the cover reveal
+      tl.to(".kinetic", { scale: 0.85, y: -40, duration: 0.6, ease: "power2.inOut" }, 6.8);
+
+      // Crossfade to cover reveal at 7.8
+      tl.to("#scene-kinetic", { opacity: 0, duration: 0.6, ease: "power2.inOut" }, 7.8);
+      tl.to("#scene-reveal", { opacity: 1, duration: 0.6, ease: "power2.inOut" }, 7.8);
+
+      tl.from("#reveal-kicker", { y: -20, opacity: 0, duration: 0.5, ease: "power2.out" }, 8.2);
+      tl.from("#reveal-cover", { y: 60, opacity: 0, duration: 0.8, ease: "expo.out" }, 8.4);
+      tl.from("#reveal-author", { y: 18, opacity: 0, duration: 0.5, ease: "power3.out" }, 9.2);
+
+      // Crossfade to CTA at 12.0
+      tl.to("#scene-reveal", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 12.0);
+      tl.to("#scene-cta", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 12.0);
+
+      tl.from("#cta-title", { y: 40, opacity: 0, duration: 0.7, ease: "expo.out" }, 12.4);
+      tl.from("#cta-button", { y: 22, opacity: 0, duration: 0.5, ease: "power3.out" }, 13.0);
+      tl.from("#cta-url", { opacity: 0, duration: 0.4, ease: "power2.out" }, 13.4);
+
+      window.__timelines["book-3a-second-brain-kinetic"] = tl;
+    </script>
+  </body>
+</html>

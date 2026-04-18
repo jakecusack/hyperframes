@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Build Your AI Second Brain 201 — 15s reel (Problem → Solution)</title>
+    <style>
+      :root {
+        --canvas-top: #2c4764;
+        --canvas-bot: #3a5f87;
+        --deep: #0f2339;
+        --text: #ffffff;
+        --accent: #3b9fde;
+        --muted: #afbcc7;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--canvas-top);
+        font-family: "Inter Tight", "Inter", system-ui, sans-serif;
+        color: var(--text);
+      }
+      [data-composition-id="book-3b-second-brain-201-problem"] {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        background: linear-gradient(180deg, #2c4764 0%, #3a5f87 100%);
+        overflow: hidden;
+      }
+      [data-composition-id="book-3b-second-brain-201-problem"]::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 40%,
+          rgba(59, 159, 222, 0.08) 0%,
+          rgba(0, 0, 0, 0) 60%
+        );
+        pointer-events: none;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+      }
+      .scene-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 140px 100px;
+        gap: 48px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .problem {
+        font-family: "Inter Tight", "Inter", sans-serif;
+        font-size: 128px;
+        font-weight: 700;
+        line-height: 1.02;
+        letter-spacing: -0.02em;
+        max-width: 920px;
+        color: var(--text);
+      }
+      .problem.muted {
+        color: var(--muted);
+      }
+      .answer-label {
+        font-family: "Inter", sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .reveal-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 44px;
+      }
+      .reveal-cover {
+        width: 560px;
+        height: 840px;
+        object-fit: cover;
+        border-radius: 8px;
+        background: #1a2d45;
+        box-shadow:
+          0 50px 100px rgba(0, 0, 0, 0.5),
+          0 16px 32px rgba(0, 0, 0, 0.3);
+      }
+      .reveal-title {
+        font-family: "Inter Tight", "Inter", sans-serif;
+        font-size: 70px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        max-width: 900px;
+      }
+      .reveal-title .accent {
+        color: var(--accent);
+      }
+      .promises {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start;
+        max-width: 900px;
+      }
+      .promise {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        font-family: "Inter Tight", "Inter", sans-serif;
+        font-size: 72px;
+        font-weight: 600;
+        line-height: 1.05;
+        letter-spacing: -0.01em;
+      }
+      .promise .dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--accent);
+        flex-shrink: 0;
+      }
+      .promise .accent {
+        color: var(--accent);
+      }
+      .cta-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 32px 72px;
+        border-radius: 8px;
+        background: var(--accent);
+        font-family: "Inter", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--deep);
+      }
+      .cta-url {
+        font-family: "Inter", sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="stage"
+      data-composition-id="book-3b-second-brain-201-problem"
+      data-start="0"
+      data-duration="15"
+      data-width="1080"
+      data-height="1920"
+    >
+      <!-- Scene A: Problem 1 (0-2s) -->
+      <div id="scene-p1" class="scene">
+        <div class="scene-content">
+          <div id="p1" class="problem muted">Notes piling up?</div>
+        </div>
+      </div>
+
+      <!-- Scene B: Problem 2 (2-4s) -->
+      <div id="scene-p2" class="scene">
+        <div class="scene-content">
+          <div id="p2" class="problem muted">Ideas stuck in silos?</div>
+        </div>
+      </div>
+
+      <!-- Scene C: Problem 3 (4-6s) -->
+      <div id="scene-p3" class="scene">
+        <div class="scene-content">
+          <div id="p3" class="problem muted">Can't see the pattern?</div>
+        </div>
+      </div>
+
+      <!-- Scene D: Reveal (6-10s) -->
+      <div id="scene-reveal" class="scene">
+        <div class="scene-content">
+          <div class="reveal-wrap">
+            <div id="answer-label" class="answer-label">The Answer</div>
+            <img
+              id="reveal-cover"
+              class="reveal-cover"
+              src="cover.png"
+              alt="Build Your AI Second Brain 201 book cover"
+            />
+            <div id="reveal-title" class="reveal-title">
+              AI Second Brain <span class="accent">201</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene E: Promises (10-13s) -->
+      <div id="scene-promises" class="scene">
+        <div class="scene-content">
+          <div class="promises">
+            <div id="promise-1" class="promise">
+              <span class="dot"></span>
+              <span>Link <span class="accent">ideas</span></span>
+            </div>
+            <div id="promise-2" class="promise">
+              <span class="dot"></span>
+              <span>Find <span class="accent">patterns</span></span>
+            </div>
+            <div id="promise-3" class="promise">
+              <span class="dot"></span>
+              <span>Generate <span class="accent">insights</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene F: CTA (13-15s) -->
+      <div id="scene-cta" class="scene">
+        <div class="scene-content">
+          <div class="cta-wrap">
+            <div id="cta-button" class="cta-button">Read on Amazon</div>
+            <div id="cta-url" class="cta-url">deepify.ai</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      tl.set(
+        ["#scene-p1", "#scene-p2", "#scene-p3", "#scene-reveal", "#scene-promises", "#scene-cta"],
+        { opacity: 0 },
+        0,
+      );
+
+      // Problem 1 (0 - 2)
+      tl.to("#scene-p1", { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 0);
+      tl.from("#p1", { y: 40, opacity: 0, duration: 0.5, ease: "power3.out" }, 0.2);
+      tl.to("#scene-p1", { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 1.7);
+
+      // Problem 2 (2 - 4)
+      tl.to("#scene-p2", { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 2.0);
+      tl.from("#p2", { y: 40, opacity: 0, duration: 0.5, ease: "expo.out" }, 2.2);
+      tl.to("#scene-p2", { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 3.7);
+
+      // Problem 3 (4 - 6)
+      tl.to("#scene-p3", { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 4.0);
+      tl.from("#p3", { y: 40, opacity: 0, duration: 0.5, ease: "power2.out" }, 4.2);
+      tl.to("#scene-p3", { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 5.7);
+
+      // Reveal (6 - 10)
+      tl.to("#scene-reveal", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 6.0);
+      tl.from("#answer-label", { y: -20, opacity: 0, duration: 0.5, ease: "power2.out" }, 6.2);
+      tl.from("#reveal-cover", { scale: 0.88, opacity: 0, duration: 0.8, ease: "expo.out" }, 6.4);
+      tl.from("#reveal-title", { y: 30, opacity: 0, duration: 0.6, ease: "power3.out" }, 7.2);
+
+      // Crossfade to promises (10)
+      tl.to("#scene-reveal", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 9.8);
+      tl.to("#scene-promises", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 9.8);
+
+      tl.from("#promise-1", { x: -50, opacity: 0, duration: 0.5, ease: "expo.out" }, 10.2);
+      tl.from("#promise-2", { x: -50, opacity: 0, duration: 0.5, ease: "power3.out" }, 10.8);
+      tl.from("#promise-3", { x: -50, opacity: 0, duration: 0.5, ease: "power2.out" }, 11.4);
+
+      // Crossfade to CTA (13)
+      tl.to("#scene-promises", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 12.8);
+      tl.to("#scene-cta", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 12.8);
+
+      tl.from("#cta-button", { y: 22, opacity: 0, duration: 0.5, ease: "expo.out" }, 13.2);
+      tl.from("#cta-url", { opacity: 0, duration: 0.4, ease: "power2.out" }, 13.6);
+
+      window.__timelines["book-3b-second-brain-201-problem"] = tl;
+    </script>
+  </body>
+</html>

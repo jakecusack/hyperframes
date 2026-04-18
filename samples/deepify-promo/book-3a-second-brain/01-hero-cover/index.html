@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Build Your AI Second Brain — 15s reel (Hero Cover)</title>
+    <style>
+      :root {
+        --canvas-top: #2c4764;
+        --canvas-bot: #3a5f87;
+        --deep: #0f2339;
+        --text: #ffffff;
+        --accent: #3b9fde;
+        --muted: #afbcc7;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--canvas-top);
+        font-family: "Inter", system-ui, sans-serif;
+        color: var(--text);
+      }
+      [data-composition-id="book-3a-second-brain-hero"] {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        background: linear-gradient(180deg, #2c4764 0%, #3a5f87 100%);
+        overflow: hidden;
+      }
+      [data-composition-id="book-3a-second-brain-hero"]::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 35%,
+          rgba(59, 159, 222, 0.1) 0%,
+          rgba(0, 0, 0, 0) 60%
+        );
+        pointer-events: none;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+      }
+      .scene-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 120px 80px;
+        gap: 48px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .cover-stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 56px;
+      }
+      .kicker {
+        font-family: "Inter", sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .cover {
+        width: 600px;
+        height: 900px;
+        object-fit: cover;
+        border-radius: 8px;
+        background: #1a2d45;
+        box-shadow:
+          0 50px 100px rgba(0, 0, 0, 0.5),
+          0 16px 32px rgba(0, 0, 0, 0.3);
+      }
+      .author {
+        font-family: "Inter", sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        color: var(--muted);
+      }
+      .author .name {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .tagline {
+        font-family: "Inter Tight", "Inter", sans-serif;
+        font-weight: 700;
+        font-size: 108px;
+        line-height: 1.04;
+        letter-spacing: -0.02em;
+        max-width: 920px;
+      }
+      .tagline .line {
+        display: block;
+      }
+      .tagline .accent {
+        color: var(--accent);
+      }
+      .rule {
+        width: 160px;
+        height: 3px;
+        background: var(--accent);
+      }
+      .benefits {
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+        align-items: flex-start;
+        max-width: 900px;
+      }
+      .benefit {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+        font-family: "Inter Tight", "Inter", sans-serif;
+        font-size: 76px;
+        font-weight: 600;
+        line-height: 1.05;
+        letter-spacing: -0.01em;
+      }
+      .benefit .num {
+        width: 84px;
+        height: 84px;
+        border-radius: 10px;
+        background: var(--accent);
+        color: var(--deep);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter", sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        flex-shrink: 0;
+      }
+      .benefit .accent {
+        color: var(--accent);
+      }
+      .cta-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+      }
+      .cta-kicker {
+        font-family: "Inter", sans-serif;
+        font-size: 26px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .cta-title {
+        font-family: "Inter Tight", "Inter", sans-serif;
+        font-size: 130px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        max-width: 920px;
+      }
+      .cta-title .accent {
+        color: var(--accent);
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 32px 72px;
+        border-radius: 8px;
+        background: var(--accent);
+        font-family: "Inter", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--deep);
+      }
+      .cta-url {
+        font-family: "Inter", sans-serif;
+        font-size: 26px;
+        font-weight: 500;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="stage"
+      data-composition-id="book-3a-second-brain-hero"
+      data-start="0"
+      data-duration="15"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div id="scene-cover" class="scene">
+        <div class="scene-content">
+          <div class="cover-stack">
+            <div id="cover-kicker" class="kicker">Deepify Academy · Book 3a</div>
+            <img
+              id="cover"
+              class="cover"
+              src="cover.png"
+              alt="Build Your AI Second Brain book cover"
+            />
+            <div id="cover-author" class="author">by <span class="name">Jake Cusack</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="scene-tagline" class="scene">
+        <div class="scene-content">
+          <div id="tagline" class="tagline">
+            <span class="line">Your knowledge,</span>
+            <span class="line accent">remembered.</span>
+            <span class="line">Your thinking,</span>
+            <span class="line accent">accelerated.</span>
+          </div>
+          <div id="tagline-rule" class="rule"></div>
+        </div>
+      </div>
+
+      <div id="scene-benefits" class="scene">
+        <div class="scene-content">
+          <div class="benefits">
+            <div id="benefit-1" class="benefit">
+              <span class="num">1</span>
+              <span>Capture <span class="accent">everything</span></span>
+            </div>
+            <div id="benefit-2" class="benefit">
+              <span class="num">2</span>
+              <span>Recall <span class="accent">instantly</span></span>
+            </div>
+            <div id="benefit-3" class="benefit">
+              <span class="num">3</span>
+              <span>Think <span class="accent">with AI</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="scene-cta" class="scene">
+        <div class="scene-content">
+          <div class="cta-wrap">
+            <div id="cta-kicker" class="cta-kicker">Available Now</div>
+            <div id="cta-title" class="cta-title">
+              Start building <span class="accent">today</span>
+            </div>
+            <div id="cta-button" class="cta-button">Read on Amazon</div>
+            <div id="cta-url" class="cta-url">deepify.ai</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      tl.set("#scene-cover", { opacity: 1 }, 0);
+      tl.set("#scene-tagline", { opacity: 0 }, 0);
+      tl.set("#scene-benefits", { opacity: 0 }, 0);
+      tl.set("#scene-cta", { opacity: 0 }, 0);
+
+      tl.from("#cover-kicker", { y: -20, opacity: 0, duration: 0.6, ease: "power2.out" }, 0.2);
+      tl.from("#cover", { y: 80, opacity: 0, duration: 0.9, ease: "power3.out" }, 0.4);
+      tl.from("#cover-author", { y: 20, opacity: 0, duration: 0.6, ease: "expo.out" }, 1.1);
+
+      tl.to("#scene-cover", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 3.8);
+      tl.to("#scene-tagline", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 3.8);
+
+      tl.from("#tagline", { y: 50, opacity: 0, duration: 0.8, ease: "expo.out" }, 4.2);
+      tl.from(
+        "#tagline-rule",
+        {
+          scaleX: 0,
+          opacity: 0,
+          transformOrigin: "left center",
+          duration: 0.7,
+          ease: "power3.out",
+        },
+        5.0,
+      );
+
+      tl.to("#scene-tagline", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 7.8);
+      tl.to("#scene-benefits", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 7.8);
+
+      tl.from("#benefit-1", { x: -60, opacity: 0, duration: 0.6, ease: "expo.out" }, 8.2);
+      tl.from("#benefit-2", { x: -60, opacity: 0, duration: 0.6, ease: "power3.out" }, 8.9);
+      tl.from("#benefit-3", { x: -60, opacity: 0, duration: 0.6, ease: "power2.out" }, 9.6);
+
+      tl.to("#scene-benefits", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 12.8);
+      tl.to("#scene-cta", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 12.8);
+
+      tl.from("#cta-kicker", { y: -18, opacity: 0, duration: 0.5, ease: "power2.out" }, 13.1);
+      tl.from("#cta-title", { y: 36, opacity: 0, duration: 0.7, ease: "expo.out" }, 13.3);
+      tl.from("#cta-button", { y: 22, opacity: 0, duration: 0.5, ease: "power3.out" }, 13.8);
+      tl.from("#cta-url", { opacity: 0, duration: 0.4, ease: "power2.out" }, 14.1);
+
+      window.__timelines["book-3a-second-brain-hero"] = tl;
+    </script>
+  </body>
+</html>
