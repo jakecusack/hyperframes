@@ -5,26 +5,26 @@
     <title>Build Your AI Second Brain 201 — 15s reel (Problem → Solution)</title>
     <style>
       :root {
-        --canvas-top: #2c4764;
-        --canvas-bot: #3a5f87;
-        --deep: #0f2339;
-        --text: #ffffff;
-        --accent: #3b9fde;
-        --muted: #afbcc7;
+        --canvas: #0a0e1a;
+        --canvas-alt: #111827;
+        --card: #1f2937;
+        --text: #e8ecf4;
+        --accent: #00d4ff;
+        --muted: #9ca3af;
       }
       html,
       body {
         margin: 0;
         padding: 0;
-        background: var(--canvas-top);
-        font-family: "Inter Tight", "Inter", system-ui, sans-serif;
+        background: var(--canvas);
+        font-family: "Space Grotesk", "Inter Tight", "Inter", system-ui, sans-serif;
         color: var(--text);
       }
       [data-composition-id="book-3b-second-brain-201-problem"] {
         position: relative;
         width: 1080px;
         height: 1920px;
-        background: linear-gradient(180deg, #2c4764 0%, #3a5f87 100%);
+        background: linear-gradient(180deg, #0a0e1a 0%, #111827 100%);
         overflow: hidden;
       }
       [data-composition-id="book-3b-second-brain-201-problem"]::before {
@@ -33,7 +33,7 @@
         inset: 0;
         background: radial-gradient(
           ellipse at 50% 40%,
-          rgba(59, 159, 222, 0.08) 0%,
+          rgba(0, 212, 255, 0.08) 0%,
           rgba(0, 0, 0, 0) 60%
         );
         pointer-events: none;
@@ -59,7 +59,7 @@
         text-align: center;
       }
       .problem {
-        font-family: "Inter Tight", "Inter", sans-serif;
+        font-family: "Space Grotesk", "Inter Tight", "Inter", sans-serif;
         font-size: 128px;
         font-weight: 700;
         line-height: 1.02;
@@ -89,13 +89,14 @@
         height: 840px;
         object-fit: cover;
         border-radius: 8px;
-        background: #1a2d45;
+        background: var(--card);
         box-shadow:
-          0 50px 100px rgba(0, 0, 0, 0.5),
-          0 16px 32px rgba(0, 0, 0, 0.3);
+          0 50px 100px rgba(0, 0, 0, 0.7),
+          0 16px 32px rgba(0, 0, 0, 0.4),
+          0 0 0 1px rgba(0, 212, 255, 0.08);
       }
       .reveal-title {
-        font-family: "Inter Tight", "Inter", sans-serif;
+        font-family: "Space Grotesk", "Inter Tight", "Inter", sans-serif;
         font-size: 70px;
         font-weight: 800;
         line-height: 1;
@@ -116,7 +117,7 @@
         display: flex;
         align-items: center;
         gap: 32px;
-        font-family: "Inter Tight", "Inter", sans-serif;
+        font-family: "Space Grotesk", "Inter Tight", "Inter", sans-serif;
         font-size: 72px;
         font-weight: 600;
         line-height: 1.05;
@@ -127,6 +128,7 @@
         height: 18px;
         border-radius: 50%;
         background: var(--accent);
+        box-shadow: 0 0 16px rgba(0, 212, 255, 0.6);
         flex-shrink: 0;
       }
       .promise .accent {
@@ -136,7 +138,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: 36px;
+      }
+      .cta-logo {
+        width: 110px;
+        height: 110px;
+        object-fit: contain;
       }
       .cta-button {
         display: inline-block;
@@ -148,14 +155,14 @@
         font-weight: 700;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: var(--deep);
+        color: var(--canvas);
+        box-shadow: 0 0 32px rgba(0, 212, 255, 0.4);
       }
       .cta-url {
-        font-family: "Inter", sans-serif;
+        font-family: "JetBrains Mono", "Inter", monospace;
         font-size: 26px;
         font-weight: 500;
-        letter-spacing: 0.24em;
-        text-transform: uppercase;
+        letter-spacing: 0.18em;
         color: var(--muted);
       }
     </style>
@@ -169,28 +176,24 @@
       data-width="1080"
       data-height="1920"
     >
-      <!-- Scene A: Problem 1 (0-2s) -->
       <div id="scene-p1" class="scene">
         <div class="scene-content">
           <div id="p1" class="problem muted">Notes piling up?</div>
         </div>
       </div>
 
-      <!-- Scene B: Problem 2 (2-4s) -->
       <div id="scene-p2" class="scene">
         <div class="scene-content">
           <div id="p2" class="problem muted">Ideas stuck in silos?</div>
         </div>
       </div>
 
-      <!-- Scene C: Problem 3 (4-6s) -->
       <div id="scene-p3" class="scene">
         <div class="scene-content">
           <div id="p3" class="problem muted">Can't see the pattern?</div>
         </div>
       </div>
 
-      <!-- Scene D: Reveal (6-10s) -->
       <div id="scene-reveal" class="scene">
         <div class="scene-content">
           <div class="reveal-wrap">
@@ -208,7 +211,6 @@
         </div>
       </div>
 
-      <!-- Scene E: Promises (10-13s) -->
       <div id="scene-promises" class="scene">
         <div class="scene-content">
           <div class="promises">
@@ -228,10 +230,10 @@
         </div>
       </div>
 
-      <!-- Scene F: CTA (13-15s) -->
       <div id="scene-cta" class="scene">
         <div class="scene-content">
           <div class="cta-wrap">
+            <img id="cta-logo" class="cta-logo" src="logo.png" alt="Deepify Academy" />
             <div id="cta-button" class="cta-button">Read on Amazon</div>
             <div id="cta-url" class="cta-url">deepify.ai</div>
           </div>
@@ -250,28 +252,23 @@
         0,
       );
 
-      // Problem 1 (0 - 2)
       tl.to("#scene-p1", { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 0);
       tl.from("#p1", { y: 40, opacity: 0, duration: 0.5, ease: "power3.out" }, 0.2);
       tl.to("#scene-p1", { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 1.7);
 
-      // Problem 2 (2 - 4)
       tl.to("#scene-p2", { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 2.0);
       tl.from("#p2", { y: 40, opacity: 0, duration: 0.5, ease: "expo.out" }, 2.2);
       tl.to("#scene-p2", { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 3.7);
 
-      // Problem 3 (4 - 6)
       tl.to("#scene-p3", { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 4.0);
       tl.from("#p3", { y: 40, opacity: 0, duration: 0.5, ease: "power2.out" }, 4.2);
       tl.to("#scene-p3", { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 5.7);
 
-      // Reveal (6 - 10)
       tl.to("#scene-reveal", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 6.0);
       tl.from("#answer-label", { y: -20, opacity: 0, duration: 0.5, ease: "power2.out" }, 6.2);
       tl.from("#reveal-cover", { scale: 0.88, opacity: 0, duration: 0.8, ease: "expo.out" }, 6.4);
       tl.from("#reveal-title", { y: 30, opacity: 0, duration: 0.6, ease: "power3.out" }, 7.2);
 
-      // Crossfade to promises (10)
       tl.to("#scene-reveal", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 9.8);
       tl.to("#scene-promises", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 9.8);
 
@@ -279,12 +276,12 @@
       tl.from("#promise-2", { x: -50, opacity: 0, duration: 0.5, ease: "power3.out" }, 10.8);
       tl.from("#promise-3", { x: -50, opacity: 0, duration: 0.5, ease: "power2.out" }, 11.4);
 
-      // Crossfade to CTA (13)
       tl.to("#scene-promises", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 12.8);
       tl.to("#scene-cta", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 12.8);
 
-      tl.from("#cta-button", { y: 22, opacity: 0, duration: 0.5, ease: "expo.out" }, 13.2);
-      tl.from("#cta-url", { opacity: 0, duration: 0.4, ease: "power2.out" }, 13.6);
+      tl.from("#cta-logo", { scale: 0.7, opacity: 0, duration: 0.5, ease: "expo.out" }, 13.0);
+      tl.from("#cta-button", { y: 22, opacity: 0, duration: 0.5, ease: "expo.out" }, 13.4);
+      tl.from("#cta-url", { opacity: 0, duration: 0.4, ease: "power2.out" }, 13.8);
 
       window.__timelines["book-3b-second-brain-201-problem"] = tl;
     </script>

@@ -5,18 +5,19 @@
     <title>Build Your Own AI Agent — 15s reel (Hero Cover)</title>
     <style>
       :root {
-        --canvas-top: #2c4764;
-        --canvas-bot: #3a5f87;
-        --deep: #0f2339;
-        --text: #ffffff;
-        --accent: #3b9fde;
-        --muted: #afbcc7;
+        --canvas: #0a0e1a;
+        --canvas-alt: #111827;
+        --card: #1f2937;
+        --text: #e8ecf4;
+        --accent: #00d4ff;
+        --accent-2: #7b61ff;
+        --muted: #9ca3af;
       }
       html,
       body {
         margin: 0;
         padding: 0;
-        background: var(--canvas-top);
+        background: var(--canvas);
         font-family: "Inter", system-ui, sans-serif;
         color: var(--text);
       }
@@ -24,7 +25,7 @@
         position: relative;
         width: 1080px;
         height: 1920px;
-        background: linear-gradient(180deg, #2c4764 0%, #3a5f87 100%);
+        background: linear-gradient(180deg, #0a0e1a 0%, #111827 100%);
         overflow: hidden;
       }
       [data-composition-id="book-voice-agent-hero"]::before {
@@ -33,7 +34,7 @@
         inset: 0;
         background: radial-gradient(
           ellipse at 50% 35%,
-          rgba(59, 159, 222, 0.1) 0%,
+          rgba(0, 212, 255, 0.1) 0%,
           rgba(0, 0, 0, 0) 60%
         );
         pointer-events: none;
@@ -77,10 +78,11 @@
         height: 900px;
         object-fit: cover;
         border-radius: 8px;
-        background: #1a2d45;
+        background: var(--card);
         box-shadow:
-          0 50px 100px rgba(0, 0, 0, 0.5),
-          0 16px 32px rgba(0, 0, 0, 0.3);
+          0 50px 100px rgba(0, 0, 0, 0.7),
+          0 16px 32px rgba(0, 0, 0, 0.4),
+          0 0 0 1px rgba(0, 212, 255, 0.08);
       }
       .author {
         font-family: "Inter", sans-serif;
@@ -93,7 +95,7 @@
         font-weight: 600;
       }
       .tagline {
-        font-family: "Inter Tight", "Inter", sans-serif;
+        font-family: "Space Grotesk", "Inter Tight", "Inter", sans-serif;
         font-weight: 700;
         font-size: 108px;
         line-height: 1.04;
@@ -110,6 +112,7 @@
         width: 160px;
         height: 3px;
         background: var(--accent);
+        box-shadow: 0 0 16px rgba(0, 212, 255, 0.6);
       }
       .benefits {
         display: flex;
@@ -122,7 +125,7 @@
         display: flex;
         align-items: center;
         gap: 36px;
-        font-family: "Inter Tight", "Inter", sans-serif;
+        font-family: "Space Grotesk", "Inter Tight", "Inter", sans-serif;
         font-size: 76px;
         font-weight: 600;
         line-height: 1.05;
@@ -133,7 +136,7 @@
         height: 84px;
         border-radius: 10px;
         background: var(--accent);
-        color: var(--deep);
+        color: var(--canvas);
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -141,6 +144,7 @@
         font-weight: 800;
         font-size: 40px;
         flex-shrink: 0;
+        box-shadow: 0 0 24px rgba(0, 212, 255, 0.3);
       }
       .benefit .accent {
         color: var(--accent);
@@ -149,18 +153,23 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 48px;
+        gap: 40px;
+      }
+      .cta-logo {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
       }
       .cta-kicker {
         font-family: "Inter", sans-serif;
-        font-size: 26px;
+        font-size: 24px;
         letter-spacing: 0.32em;
         text-transform: uppercase;
         color: var(--muted);
       }
       .cta-title {
-        font-family: "Inter Tight", "Inter", sans-serif;
-        font-size: 130px;
+        font-family: "Space Grotesk", "Inter Tight", "Inter", sans-serif;
+        font-size: 124px;
         font-weight: 800;
         line-height: 1;
         letter-spacing: -0.03em;
@@ -179,14 +188,14 @@
         font-weight: 700;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: var(--deep);
+        color: var(--canvas);
+        box-shadow: 0 0 32px rgba(0, 212, 255, 0.4);
       }
       .cta-url {
-        font-family: "Inter", sans-serif;
+        font-family: "JetBrains Mono", "Inter", monospace;
         font-size: 26px;
         font-weight: 500;
-        letter-spacing: 0.24em;
-        text-transform: uppercase;
+        letter-spacing: 0.18em;
         color: var(--muted);
       }
     </style>
@@ -249,6 +258,7 @@
       <div id="scene-cta" class="scene">
         <div class="scene-content">
           <div class="cta-wrap">
+            <img id="cta-logo" class="cta-logo" src="logo.png" alt="Deepify Academy" />
             <div id="cta-kicker" class="cta-kicker">Available Now</div>
             <div id="cta-title" class="cta-title">Ship your <span class="accent">agent</span></div>
             <div id="cta-button" class="cta-button">Read on Amazon</div>
@@ -298,10 +308,11 @@
       tl.to("#scene-benefits", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 12.8);
       tl.to("#scene-cta", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 12.8);
 
-      tl.from("#cta-kicker", { y: -18, opacity: 0, duration: 0.5, ease: "power2.out" }, 13.1);
-      tl.from("#cta-title", { y: 36, opacity: 0, duration: 0.7, ease: "expo.out" }, 13.3);
-      tl.from("#cta-button", { y: 22, opacity: 0, duration: 0.5, ease: "power3.out" }, 13.8);
-      tl.from("#cta-url", { opacity: 0, duration: 0.4, ease: "power2.out" }, 14.1);
+      tl.from("#cta-logo", { scale: 0.7, opacity: 0, duration: 0.5, ease: "expo.out" }, 13.0);
+      tl.from("#cta-kicker", { y: -18, opacity: 0, duration: 0.5, ease: "power2.out" }, 13.3);
+      tl.from("#cta-title", { y: 36, opacity: 0, duration: 0.6, ease: "expo.out" }, 13.5);
+      tl.from("#cta-button", { y: 22, opacity: 0, duration: 0.5, ease: "power3.out" }, 13.9);
+      tl.from("#cta-url", { opacity: 0, duration: 0.4, ease: "power2.out" }, 14.2);
 
       window.__timelines["book-voice-agent-hero"] = tl;
     </script>

@@ -5,26 +5,26 @@
     <title>Build Your AI Second Brain — 15s reel (Kinetic Type)</title>
     <style>
       :root {
-        --canvas-top: #2c4764;
-        --canvas-bot: #3a5f87;
-        --deep: #0f2339;
-        --text: #ffffff;
-        --accent: #3b9fde;
-        --muted: #afbcc7;
+        --canvas: #0a0e1a;
+        --canvas-alt: #111827;
+        --card: #1f2937;
+        --text: #e8ecf4;
+        --accent: #00d4ff;
+        --muted: #9ca3af;
       }
       html,
       body {
         margin: 0;
         padding: 0;
-        background: var(--canvas-top);
-        font-family: "Inter Tight", "Inter", system-ui, sans-serif;
+        background: var(--canvas);
+        font-family: "Space Grotesk", "Inter Tight", "Inter", system-ui, sans-serif;
         color: var(--text);
       }
       [data-composition-id="book-3a-second-brain-kinetic"] {
         position: relative;
         width: 1080px;
         height: 1920px;
-        background: linear-gradient(180deg, #2c4764 0%, #3a5f87 100%);
+        background: linear-gradient(180deg, #0a0e1a 0%, #111827 100%);
         overflow: hidden;
       }
       [data-composition-id="book-3a-second-brain-kinetic"]::before {
@@ -33,7 +33,7 @@
         inset: 0;
         background: radial-gradient(
           ellipse at 50% 45%,
-          rgba(59, 159, 222, 0.12) 0%,
+          rgba(0, 212, 255, 0.12) 0%,
           rgba(0, 0, 0, 0) 60%
         );
         pointer-events: none;
@@ -65,7 +65,7 @@
         gap: 0;
       }
       .kinetic .word {
-        font-family: "Inter Tight", "Inter", sans-serif;
+        font-family: "Space Grotesk", "Inter Tight", "Inter", sans-serif;
         font-size: 220px;
         font-weight: 800;
         line-height: 0.95;
@@ -74,6 +74,7 @@
       }
       .kinetic .word.accent {
         color: var(--accent);
+        text-shadow: 0 0 40px rgba(0, 212, 255, 0.35);
       }
       .kinetic .word.small {
         font-size: 160px;
@@ -97,10 +98,11 @@
         height: 810px;
         object-fit: cover;
         border-radius: 8px;
-        background: #1a2d45;
+        background: var(--card);
         box-shadow:
-          0 50px 100px rgba(0, 0, 0, 0.5),
-          0 16px 32px rgba(0, 0, 0, 0.3);
+          0 50px 100px rgba(0, 0, 0, 0.7),
+          0 16px 32px rgba(0, 0, 0, 0.4),
+          0 0 0 1px rgba(0, 212, 255, 0.08);
       }
       .reveal-author {
         font-family: "Inter", sans-serif;
@@ -115,11 +117,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 44px;
+        gap: 40px;
+      }
+      .cta-logo {
+        width: 110px;
+        height: 110px;
+        object-fit: contain;
       }
       .cta-title {
-        font-family: "Inter Tight", "Inter", sans-serif;
-        font-size: 130px;
+        font-family: "Space Grotesk", "Inter Tight", "Inter", sans-serif;
+        font-size: 124px;
         font-weight: 800;
         line-height: 1;
         letter-spacing: -0.03em;
@@ -138,14 +145,14 @@
         font-weight: 700;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: var(--deep);
+        color: var(--canvas);
+        box-shadow: 0 0 32px rgba(0, 212, 255, 0.4);
       }
       .cta-url {
-        font-family: "Inter", sans-serif;
+        font-family: "JetBrains Mono", "Inter", monospace;
         font-size: 26px;
         font-weight: 500;
-        letter-spacing: 0.24em;
-        text-transform: uppercase;
+        letter-spacing: 0.18em;
         color: var(--muted);
       }
     </style>
@@ -190,6 +197,7 @@
       <div id="scene-cta" class="scene">
         <div class="scene-content">
           <div class="cta-wrap">
+            <img id="cta-logo" class="cta-logo" src="logo.png" alt="Deepify Academy" />
             <div id="cta-title" class="cta-title">
               Start building <span class="accent">today</span>
             </div>
@@ -209,7 +217,6 @@
       tl.set("#scene-reveal", { opacity: 0 }, 0);
       tl.set("#scene-cta", { opacity: 0 }, 0);
 
-      // Kinetic type — each word slams in on its own beat
       tl.set(["#word-1", "#word-2", "#word-3", "#word-4"], { opacity: 0, y: 60, scale: 0.9 }, 0);
 
       tl.to("#word-1", { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 0.2);
@@ -217,13 +224,10 @@
       tl.to("#word-3", { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "expo.out" }, 2.2);
       tl.to("#word-4", { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power2.out" }, 3.4);
 
-      // Subtle letter-spacing tighten as the title finishes
       tl.to("#word-3", { letterSpacing: "-0.06em", duration: 0.6, ease: "power2.inOut" }, 4.0);
 
-      // Scale all the words down slightly to make room for the cover reveal
       tl.to(".kinetic", { scale: 0.85, y: -40, duration: 0.6, ease: "power2.inOut" }, 6.8);
 
-      // Crossfade to cover reveal at 7.8
       tl.to("#scene-kinetic", { opacity: 0, duration: 0.6, ease: "power2.inOut" }, 7.8);
       tl.to("#scene-reveal", { opacity: 1, duration: 0.6, ease: "power2.inOut" }, 7.8);
 
@@ -231,13 +235,13 @@
       tl.from("#reveal-cover", { y: 60, opacity: 0, duration: 0.8, ease: "expo.out" }, 8.4);
       tl.from("#reveal-author", { y: 18, opacity: 0, duration: 0.5, ease: "power3.out" }, 9.2);
 
-      // Crossfade to CTA at 12.0
       tl.to("#scene-reveal", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 12.0);
       tl.to("#scene-cta", { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 12.0);
 
-      tl.from("#cta-title", { y: 40, opacity: 0, duration: 0.7, ease: "expo.out" }, 12.4);
-      tl.from("#cta-button", { y: 22, opacity: 0, duration: 0.5, ease: "power3.out" }, 13.0);
-      tl.from("#cta-url", { opacity: 0, duration: 0.4, ease: "power2.out" }, 13.4);
+      tl.from("#cta-logo", { scale: 0.7, opacity: 0, duration: 0.5, ease: "expo.out" }, 12.2);
+      tl.from("#cta-title", { y: 40, opacity: 0, duration: 0.6, ease: "expo.out" }, 12.5);
+      tl.from("#cta-button", { y: 22, opacity: 0, duration: 0.5, ease: "power3.out" }, 13.1);
+      tl.from("#cta-url", { opacity: 0, duration: 0.4, ease: "power2.out" }, 13.5);
 
       window.__timelines["book-3a-second-brain-kinetic"] = tl;
     </script>
