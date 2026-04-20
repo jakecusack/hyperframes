@@ -24,11 +24,22 @@ See `_brand/DESIGN.md` for the palette, typography, and motion rules.
 
 ## Setup (one-time)
 
-1. Drop cover images into `_assets/` with these filenames:
+1. Drop cover images (and `logo.png`) into an assets folder with these filenames:
    - `book-3a.png` — _Build Your AI Second Brain_
    - `book-3b.png` — _Build Your AI Second Brain 201_
    - `voice-agent.png` — _Build Your Own AI Agent_
    - `local-ai.png` — _Local AI Infrastructure_
+   - `logo.png` — Deepify Academy logo (400×400 recommended)
+
+   Either place them in the repo-local `_assets/` folder, **or** point at a shared location (e.g. Google Drive) via `HYPERFRAMES_ASSETS_DIR`:
+
+   ```bash
+   # macOS / Linux
+   export HYPERFRAMES_ASSETS_DIR="$HOME/Google Drive/My Drive/Deepify/Assets"
+
+   # Windows (Git Bash)
+   export HYPERFRAMES_ASSETS_DIR="/c/Users/$USER/My Drive/Deepify/Assets"
+   ```
 
 2. Run the distribution script from the repo root:
 
@@ -36,7 +47,7 @@ See `_brand/DESIGN.md` for the palette, typography, and motion rules.
    bash samples/deepify-promo/setup.sh
    ```
 
-   This copies each cover into the three variation folders for its book.
+   This copies each cover + logo into the three variation folders for its book.
 
 3. (Optional) Drop a 15-second ambient loop into each variation folder as `music.mp3` and add the audio tag (see individual READMEs).
 

@@ -5,7 +5,21 @@
 set -eu
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-ASSETS_DIR="$SCRIPT_DIR/_assets"
+
+# Source assets can live outside the repo (e.g. Google Drive) so both machines
+# share one canonical copy. Set HYPERFRAMES_ASSETS_DIR to override, otherwise
+# fall back to the repo-local _assets/ folder.
+if [ -n "${HYPERFRAMES_ASSETS_DIR:-}" ]; then
+  ASSETS_DIR="$HYPERFRAMES_ASSETS_DIR"
+  echo "using shared assets: $ASSETS_DIR"
+else
+  ASSETS_DIR="$SCRIPT_DIR/_assets"
+fi
+
+if [ ! -d "$ASSETS_DIR" ]; then
+  echo "error: assets dir not found: $ASSETS_DIR" >&2
+  exit 1
+fi
 
 BOOK_SLUGS=(
   "book-3a-second-brain"
